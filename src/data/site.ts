@@ -123,7 +123,7 @@ export const siteData: SiteConfig = {
     subline: "Residential and plotted developments across Bengaluru, guided by over four decades of real estate experience.",
     ctaPrimary: "Explore Projects",
     ctaSecondary: "Schedule Advisory",
-    image: "/assets/hero-cinematic.jpg"
+    image: "/assets/hero-cinematic.webp"
   },
 
   purposeStatement: {
@@ -258,14 +258,14 @@ export const siteData: SiteConfig = {
       name: "K. P. Ramesh Babu",
       title: "Founder, Promoter and Executive Director",
       credentials: "Real Estate Industry Veteran (40+ Years)",
-      image: "/assets/ramesh-babu.jpg",
+      image: "/assets/ramesh-babu.webp",
       bio: "A veteran of the real estate industry, K. P. Ramesh Babu has had a ringside view of the highs and lows of the development sector over four decades. He has extensive experience in real estate and property development in Bangalore. Under his stewardship, the company's history is a testimony to the success of a rank outsider to property development in a new city; today, Aramane has an enviable portfolio of assets comprising class residential and plotted development projects. At the core of his professional endeavours is his personal credo of PQRST: Punctuality, Quality, Reliability, Speed and Transparency. This value framework places the customer at the heart of every project and every activity within Aramane. Through this, he has infused a high level of professionalism very early in the organization. From displaying architectural flair to being a bellwether of corporate responsibility, Mr. Ramesh Babu has demonstrated the power of his vision and the strength of his values, inspiring others with a quest to achieve greater heights. He has worked with most of the top players in the Bangalore realty sector and brings significant experience in real estate and property development. He oversees all activities of Aramane Developers, including real estate, sourcing of land, land development, legal, infrastructure development, identification of land parcels and market, and overall finance of the projects."
     },
     {
       name: "Mr. Sandeep Kopparam",
       title: "Managing Director",
       credentials: "B.Arch, M.Sc (London), IPF Dip, MRICS, MCIOB",
-      image: "/assets/sandeep-kopparam.jpg",
+      image: "/assets/sandeep-kopparam.webp",
       bio: "Mr. Sandeep Kopparam is the Managing Director of Aramane Builders and Developers Pvt. Ltd. He is an architect by profession and a professionally qualified chartered builder. He holds a master's degree in Construction Management and Real Estate from the University of Reading, and a Bachelor of Architecture degree from M.S. Ramaiah Institute of Technology, Bangalore. He has diverse experience in design, architecture, liaison, project coordination, project management, procurement, construction, project execution and sales with world-class and reputed organizations such as RSP Architects, Engineers and Planners, Synergy Property Development, Colliers International, Prestige Group, Anarock and other leading consultants and developers in India and the United Kingdom. He is also involved in angel investment, farming and finance. He oversees all activities of Aramane Developers, including project conceptualization, design, construction, execution and delivery. Verticals such as projects and engineering, design and architecture, construction, marketing and communications, and customer service were established under him."
     }
   ],
@@ -311,8 +311,8 @@ export const siteData: SiteConfig = {
         "Shopping, Dining & Regional Entertainment Hubs"
       ],
       images: [
-        "/assets/plotted-luxury.jpg",
-        "/assets/assets-aadhya.jpg"
+        "/assets/plotted-luxury.webp",
+        "/assets/assets-aadhya.webp"
       ]
     },
     {
@@ -353,7 +353,7 @@ export const siteData: SiteConfig = {
         "Local Transit & Public Commuter Links"
       ],
       images: [
-        "/assets/krb-township.jpg"
+        "/assets/krb-township.webp"
       ]
     },
     {
@@ -389,8 +389,8 @@ export const siteData: SiteConfig = {
         "Upcoming Namma Metro Line Connectivity"
       ],
       images: [
-        "/assets/chandapura-1.jpg",
-        "/assets/chandapura-2.jpg"
+        "/assets/chandapura-1.webp",
+        "/assets/chandapura-2.webp"
       ]
     },
     {
@@ -427,8 +427,8 @@ export const siteData: SiteConfig = {
         "Malls, Supermarkets & Fine Dining Avenues"
       ],
       images: [
-        "/assets/highrise-luxury.jpg",
-        "/assets/electronics-city.jpg"
+        "/assets/highrise-luxury.webp",
+        "/assets/electronics-city.webp"
       ]
     },
     {
@@ -462,7 +462,7 @@ export const siteData: SiteConfig = {
         "Future Metro & Highway Radial Expansion [details to be confirmed]"
       ],
       images: [
-        "/assets/township-layout.jpg"
+        "/assets/township-layout.webp"
       ]
     }
   ]

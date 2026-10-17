@@ -32,6 +32,7 @@ const ProjectCard = ({
           src={project.image}
           alt={project.alt}
           loading="lazy"
+          decoding="async"
           className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.018]"
         />
       </div>

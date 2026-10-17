@@ -56,20 +56,20 @@ export const CompletedProjects = () => {
                 data-testid={`allied-service-row-${i}`}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive(null)}
-                className={`group flex items-center justify-between gap-6 border-t border-ink/12 py-6 transition-[background-color,padding] duration-500 hover:bg-ink/[0.035] md:py-8 ${
+                className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 border-t border-ink/12 py-5 transition-[background-color,padding] duration-500 hover:bg-ink/[0.035] md:py-8 ${
                   i === COMPLETED_PROJECTS.length - 1 ? "border-b" : ""
                 }`}
               >
-                <div className="flex items-baseline gap-5 md:gap-8">
-                  <span className="hidden font-serif text-sm text-stone_mute/60 sm:block">
+                <div className="flex items-baseline gap-4 md:gap-8">
+                  <span className="font-serif text-xs sm:text-sm text-stone_mute/60">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-serif text-2xl font-light text-ink transition-colors duration-300 group-hover:text-gold sm:text-3xl">
+                  <h3 className="font-serif text-xl sm:text-2xl font-light text-ink transition-colors duration-300 group-hover:text-gold lg:text-3xl">
                     {p.name}
                   </h3>
                 </div>
-                <div className="flex items-center gap-5">
-                  <p className="text-right text-[0.6rem] uppercase leading-relaxed tracking-[0.22em] text-stone_mute sm:text-[0.65rem] max-w-xs md:max-w-md">
+                <div className="flex items-center justify-between sm:justify-end gap-4 pl-7 sm:pl-0">
+                  <p className="text-left sm:text-right text-[0.6rem] uppercase leading-relaxed tracking-[0.2em] text-stone_mute sm:text-[0.65rem] max-w-xs md:max-w-md">
                     {p.descriptor}
                     <span className="block text-gold/80 mt-0.5">{p.year}</span>
                   </p>

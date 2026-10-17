@@ -271,7 +271,7 @@ export const Contact = () => {
                 <button
                   type="submit"
                   data-testid="enquiry-submit-btn"
-                  className="group inline-flex items-center gap-3 bg-gold px-10 py-4 text-xs uppercase tracking-[0.22em] text-ink transition-colors duration-300 hover:bg-golddark cursor-pointer font-medium"
+                  className="group inline-flex items-center justify-center gap-3 bg-gold px-10 py-4 text-xs uppercase tracking-[0.22em] text-ink transition-colors duration-300 hover:bg-golddark cursor-pointer font-medium w-full sm:w-auto"
                 >
                   Submit Enquiry
                   <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1.5" />

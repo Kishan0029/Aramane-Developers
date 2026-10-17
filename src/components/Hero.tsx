@@ -26,7 +26,7 @@ export const Hero = () => {
     <section
       id="home"
       data-testid="hero-section"
-      className="relative flex min-h-screen items-end overflow-hidden bg-ink"
+      className="relative flex min-h-[100dvh] items-end overflow-hidden bg-ink"
     >
       <div className="absolute inset-0">
         <AnimatePresence initial={false}>
@@ -35,6 +35,7 @@ export const Hero = () => {
             src={images[currentIdx].src}
             alt={images[currentIdx].alt}
             fetchPriority="high"
+            decoding="async"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -44,11 +45,11 @@ export const Hero = () => {
             }`}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/35 to-ink/15" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/45 via-ink/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/50 via-ink/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-28 pt-40 md:px-12 md:pb-36 lg:px-20">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 pt-36 sm:pb-28 sm:pt-40 md:px-12 md:pb-36 lg:px-20">
         <motion.p
           initial={{ opacity: 0, y: reduce ? 0 : 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +61,7 @@ export const Hero = () => {
 
         <h1
           data-testid="hero-headline"
-          className="mt-6 max-w-4xl font-serif text-4xl font-light leading-[1.08] tracking-tight text-sand sm:text-5xl lg:text-6xl"
+          className="mt-6 max-w-4xl font-serif text-3xl font-light leading-[1.12] tracking-tight text-sand sm:text-5xl lg:text-6xl"
         >
           {HERO.headline.map((line, i) => (
             <span key={line} className="block overflow-hidden">
@@ -81,7 +82,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: reduce ? 0 : 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-6 max-w-xl text-base text-sand/75 md:text-lg"
+          className="mt-6 max-w-xl text-sm sm:text-base text-sand/80 md:text-lg leading-relaxed"
         >
           {HERO.subline}
         </motion.p>
@@ -90,12 +91,12 @@ export const Hero = () => {
           initial={{ opacity: 0, y: reduce ? 0 : 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
         >
           <button
             data-testid="hero-explore-cta"
             onClick={() => scrollToId(HERO.primaryCta.target)}
-            className="group inline-flex items-center gap-3 border border-sand/40 px-8 py-4 text-xs uppercase tracking-[0.22em] text-sand transition-colors duration-300 hover:border-sand hover:bg-sand hover:text-ink cursor-pointer"
+            className="group inline-flex items-center justify-center gap-3 border border-sand/40 px-8 py-4 text-xs uppercase tracking-[0.22em] text-sand transition-colors duration-300 hover:border-sand hover:bg-sand hover:text-ink cursor-pointer w-full sm:w-auto"
           >
             {HERO.primaryCta.label}
             <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -103,7 +104,7 @@ export const Hero = () => {
           <button
             data-testid="hero-viewing-cta"
             onClick={() => scrollToId(HERO.secondaryCta.target)}
-            className="group inline-flex items-center gap-3 bg-gold px-8 py-4 text-xs uppercase tracking-[0.22em] text-ink transition-colors duration-300 hover:bg-golddark cursor-pointer"
+            className="group inline-flex items-center justify-center gap-3 bg-gold px-8 py-4 text-xs uppercase tracking-[0.22em] text-ink transition-colors duration-300 hover:bg-golddark cursor-pointer w-full sm:w-auto font-medium shadow-sm"
           >
             {HERO.secondaryCta.label}
             <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -112,14 +113,14 @@ export const Hero = () => {
       </div>
 
       {images.length > 1 && (
-        <div className="absolute bottom-8 right-6 z-20 hidden items-center gap-2.5 md:flex md:right-12 lg:right-20">
+        <div className="absolute bottom-6 right-6 z-20 flex items-center gap-2 md:bottom-8 md:right-12 lg:right-20">
           {images.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentIdx(idx)}
               aria-label={`Show hero slide ${idx + 1}`}
               className={`h-1.5 transition-all duration-500 cursor-pointer ${
-                idx === currentIdx ? "w-10 bg-gold" : "w-3 bg-white/30 hover:bg-white/60"
+                idx === currentIdx ? "w-8 sm:w-10 bg-gold" : "w-2.5 sm:w-3 bg-white/30 hover:bg-white/60"
               }`}
             />
           ))}

@@ -44,9 +44,9 @@ export const Intro = () => {
           </Reveal>
           <Reveal delay={0.3}>
             <a
-              href="#"
+              href="/about"
               data-testid="intro-know-more-link"
-              className="group mt-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-ink transition-colors hover:text-golddark"
+              className="group mt-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-ink transition-colors hover:text-golddark cursor-pointer font-medium"
             >
               {INTRO.linkLabel}
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -66,6 +66,7 @@ export const Intro = () => {
               src={INTRO.image}
               alt={INTRO.imageAlt}
               loading="lazy"
+              decoding="async"
               style={reduce ? {} : { y }}
               className="absolute -top-[10%] left-0 h-[120%] w-full object-cover will-change-transform"
             />

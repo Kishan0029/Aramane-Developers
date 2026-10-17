@@ -24,6 +24,7 @@ export const LifestyleBand = () => {
         src={LIFESTYLE.image}
         alt={LIFESTYLE.imageAlt}
         loading="lazy"
+        decoding="async"
         style={reduce ? {} : { y }}
         className="absolute -top-[10%] left-0 h-[120%] w-full object-cover will-change-transform"
       />

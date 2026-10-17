@@ -16,15 +16,15 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  image: "/assets/hero-sunny-highrise.png",
+  image: "/assets/hero-sunny-highrise.webp",
   imageAlt: "Sunny High-Rise Complex Amid Lush Greenery - Aramane Developers",
   images: [
     {
-      src: "/assets/hero-sunny-highrise.png",
+      src: "/assets/hero-sunny-highrise.webp",
       alt: "Sunny High-Rise Complex Amid Lush Greenery - Aramane Developers",
     },
     {
-      src: "/assets/hero-lush-modern.png",
+      src: "/assets/hero-lush-modern.webp",
       alt: "Lush Modern Apartment Complex - Aramane Developers",
     },
   ],
@@ -44,7 +44,7 @@ export const INTRO = {
     "Aramane Developers is a Bengaluru-based real estate studio shaped by a simple belief: a home should outlast trends. Every address we create begins with light, landscape and proportion — and is delivered with complete transparency, from the first drawing to the final handover.",
   linkLabel: "Know more about us",
   image:
-    "https://images.unsplash.com/photo-1786011243992-808eb40e0144?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB2aWxsYSUyMGNvdXJ0eWFyZCUyMHBvb2wlMjBhcmNoaXRlY3R1cmUlMjBuaWdodHxlbnwwfHx8fDE3OTIyNDAxNDB8MA&ixlib=rb-4.1.0&q=85",
+    "https://images.unsplash.com/photo-1786011243992-808eb40e0144?auto=format&fit=crop&w=1400&q=80",
   imageAlt: "Private villa courtyard and pool at night",
 };
 
@@ -81,7 +81,7 @@ export const PROJECTS: ProjectItem[] = [
     type: "Premium Residential Plots · 8 Acres · 115 Plots",
     status: "Ready to Occupy",
     testId: "project-card-assets-adhya",
-    image: "/assets/assets-aadhya-poster.png",
+    image: "/assets/assets-aadhya-poster.webp",
     alt: "Assets Aadhya Premium Residential Plots in 8 acres 115 plots at Hampapura Mysore Road",
     isPoster: true,
   },
@@ -92,7 +92,7 @@ export const PROJECTS: ProjectItem[] = [
     type: "Premium Residential Plots · JD Project 35 Acres",
     status: "Ready to Occupy",
     testId: "project-card-krb-township",
-    image: "/assets/krb-township-poster.png",
+    image: "/assets/krb-township-poster.webp",
     alt: "KRB Township Premium Residential Plots JD Project 35 Acres at Jayasandra Nukkanahalli",
     isPoster: true,
   },
@@ -103,7 +103,7 @@ export const PROJECTS: ProjectItem[] = [
     type: "Residential Apartment Project · 57,000 Sq. Ft.",
     status: "Ongoing",
     testId: "project-card-chandapura",
-    image: "/assets/chandapura-lush-apartment.png",
+    image: "/assets/chandapura-lush-apartment.webp",
     alt: "Lush Modern Apartment Complex - 57,000 sq.ft. Apartment Project near Narayana Hrudayalaya Chandapura",
   },
   {
@@ -113,7 +113,7 @@ export const PROJECTS: ProjectItem[] = [
     type: "3.5 Acre High Rise Apartment · JD + Outright",
     status: "Upcoming",
     testId: "project-card-electronic-city",
-    image: "/assets/electronic-city-sunny-highrise.png",
+    image: "/assets/electronic-city-sunny-highrise.webp",
     alt: "Sunny High-Rise Complex Amid Lush Greenery - 3.5 Acre High Rise Apartment Electronic City",
   },
   {
@@ -123,7 +123,7 @@ export const PROJECTS: ProjectItem[] = [
     type: "25 Acres of Own Land · Township Plotted Development",
     status: "Upcoming",
     testId: "project-card-township",
-    image: "/assets/township-masterplan.png",
+    image: "/assets/township-masterplan.webp",
     alt: "Colorful Bird's-Eye Neighborhood Masterplan - 25 Acres of Own Land Township Plotted Development",
   },
 ];
@@ -158,7 +158,7 @@ export const PILLARS = [
 
 export const LIFESTYLE = {
   image:
-    "https://images.unsplash.com/photo-1775811091644-69162fa36ea1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB2aWxsYSUyMGNvdXJ0eWFyZCUyMHBvb2wlMjBhcmNoaXRlY3R1cmUlMjBuaWdodHxlbnwwfHx8fDE3OTIyNDAxNDB8MA&ixlib=rb-4.1.0&q=85",
+    "https://images.unsplash.com/photo-1775811091644-69162fa36ea1?auto=format&fit=crop&w=1600&q=80",
   imageAlt: "Landscaped courtyard and infinity pool at dusk",
   quote: "A home is not a place. It is the feeling of having arrived.",
   caption: "COURTYARDS · GARDENS · QUIET CORNERS",

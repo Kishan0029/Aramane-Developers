@@ -37,8 +37,10 @@ export default function AboutPage() {
                   {/* Image Frame */}
                   <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-gold/40 bg-sand/80 shadow-md">
                     <img
-                      src="/assets/ramesh-babu.jpg"
+                      src="/assets/ramesh-babu.webp"
                       alt="Mr. K. P. Ramesh Babu - Real Estate Visionary"
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover object-center grayscale contrast-110 transition-transform duration-700 hover:scale-105"
                     />
                   </div>
@@ -103,8 +105,10 @@ export default function AboutPage() {
                   {/* Image Frame */}
                   <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-gold/40 bg-sand/80 shadow-md">
                     <img
-                      src="/assets/sandeep-kopparam.jpg"
+                      src="/assets/sandeep-kopparam.webp"
                       alt="Mr. Sandeep Kopparam - Managing Director"
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover object-center grayscale contrast-110 transition-transform duration-700 hover:scale-105"
                     />
                   </div>

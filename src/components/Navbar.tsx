@@ -181,7 +181,9 @@ export const Navbar = ({ forceSolid = false }: { forceSolid?: boolean }) => {
             onClick={() => setOpen(!open)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className={`p-2 lg:hidden cursor-pointer ${lightText ? "text-sand" : "text-ink"}`}
+            className={`p-2 lg:hidden cursor-pointer relative z-50 transition-colors ${
+              open || lightText ? "text-sand" : "text-ink"
+            }`}
           >
             {open ? <X size={26} strokeWidth={1.5} /> : <Menu size={26} strokeWidth={1.5} />}
           </button>
@@ -252,10 +254,10 @@ export const Navbar = ({ forceSolid = false }: { forceSolid?: boolean }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 flex flex-col justify-between bg-ink px-8 py-20 lg:hidden overflow-y-auto"
+            transition={{ duration: 0.35 }}
+            className="fixed inset-0 z-40 flex flex-col justify-between bg-ink px-6 py-24 sm:px-10 lg:hidden overflow-y-auto"
           >
-            <nav className="flex flex-col gap-2 mt-6" aria-label="Mobile">
+            <nav className="flex flex-col gap-1 mt-4" aria-label="Mobile">
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.label}
@@ -272,27 +274,32 @@ export const Navbar = ({ forceSolid = false }: { forceSolid?: boolean }) => {
                       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  initial={{ opacity: 0, y: 24 }}
+                  initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                  className="border-b border-white/10 py-4 font-serif text-3xl font-light text-sand transition-colors hover:text-gold"
+                  transition={{ delay: 0.08 + i * 0.06, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="border-b border-white/10 py-4 font-serif text-2xl sm:text-3xl font-light text-sand transition-colors hover:text-gold flex items-center justify-between"
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-gold/60 font-sans">0{i + 1}</span>
                 </motion.a>
               ))}
             </nav>
 
-            <motion.a
-              href="/contact"
-              data-testid="mobile-navbar-contact-cta"
-              onClick={() => setOpen(false)}
-              initial={{ opacity: 0, y: 24 }}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 self-start bg-gold px-8 py-4 text-xs uppercase tracking-[0.22em] text-ink transition-colors hover:bg-golddark cursor-pointer font-medium"
+              transition={{ delay: 0.35, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="mt-10 pt-6 border-t border-white/10"
             >
-              Contact
-            </motion.a>
+              <a
+                href="/contact"
+                data-testid="mobile-navbar-contact-cta"
+                onClick={() => setOpen(false)}
+                className="flex w-full items-center justify-center bg-gold py-4 text-xs uppercase tracking-[0.22em] text-ink transition-colors hover:bg-golddark cursor-pointer font-medium shadow-md"
+              >
+                Contact Aramane
+              </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

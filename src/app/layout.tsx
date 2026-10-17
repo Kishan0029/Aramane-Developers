@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import "./globals.css";
@@ -17,6 +17,13 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0A0A0A",
+};
+
 export const metadata: Metadata = {
   title: "ARAMANE DEVELOPERS — Design-led homes, built with intent in Bengaluru",
   description:
@@ -27,7 +34,7 @@ export const metadata: Metadata = {
     "Luxury Apartments Bengaluru",
     "Sadashivanagar Apartments",
     "Whitefield Villas",
-    "Devanahalli Plots"
+    "Devanahalli Plots",
   ],
   icons: {
     icon: "/favicon.ico",
@@ -44,7 +51,16 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${dmSans.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-sand text-ink font-sans antialiased">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/hero-sunny-highrise.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
+      </head>
+      <body className="min-h-screen bg-sand text-ink font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-ink">
         {children}
         <WhatsAppFloat />
       </body>
