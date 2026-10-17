@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand: #F6F3EE;
+  --color-ink: #111111;
+  --color-charcoal: #0A0A0A;
+  --color-gold: #B8A27A;
+  --color-golddark: #A28D67;
+  --color-sand_mute: #A39E93;
+  --color-stone_mute: #666055;
+
+  --font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-sans), "DM Sans", Inter, system-ui, sans-serif;
+}
+
+:root {
+  --background: #F6F3EE;
+  --foreground: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F6F3EE;
+  color: #111111;
+}
+
+body {
+  background-color: #F6F3EE;
+  color: #111111;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #B8A27A;
+  color: #111111;
+}
+
+:focus-visible {
+  outline: 2px solid #B8A27A;
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a362e;
+  border: 2px solid #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8A27A;
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.12) translateY(-1.5%);
+  }
+}
+
+.ken-burns {
+  animation: ken-burns 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes scroll-line {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.scroll-line {
+  animation: scroll-line 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .ken-burns,
+  .scroll-line {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
