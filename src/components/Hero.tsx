@@ -112,27 +112,12 @@ export const Hero = () => {
         </motion.div>
       </div>
 
-      {images.length > 1 && (
-        <div className="absolute bottom-6 right-6 z-20 flex items-center gap-2 md:bottom-8 md:right-12 lg:right-20">
-          {images.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIdx(idx)}
-              aria-label={`Show hero slide ${idx + 1}`}
-              className={`h-1.5 transition-all duration-500 cursor-pointer ${
-                idx === currentIdx ? "w-8 sm:w-10 bg-gold" : "w-2.5 sm:w-3 bg-white/30 hover:bg-white/60"
-              }`}
-            />
-          ))}
-        </div>
-      )}
-
       <motion.div
         data-testid="hero-scroll-indicator"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.4 }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3"
+        className="absolute bottom-8 left-1/2 z-10 hidden md:flex -translate-x-1/2 flex-col items-center gap-3 pointer-events-none"
         aria-hidden="true"
       >
         <span className="text-[0.6rem] uppercase tracking-[0.35em] text-sand/50">Scroll</span>
